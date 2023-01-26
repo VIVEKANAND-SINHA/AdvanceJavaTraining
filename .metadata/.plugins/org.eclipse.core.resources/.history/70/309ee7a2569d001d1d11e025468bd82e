@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Solution No. 11</title>
+</head>
+<body>
+<pre>
+<h1>11.	Write a HTTP servlet program to display Hello! This is Your First Servlet on 
+browser and also deploy the complete process into the container 'web.xml' file</h1>
+</pre>
+<form method = "post" action = "HelloServlet">
+<h1>Click the button</h1>
+<button type = "Submit">Click Me!</button>
+</form>
+
+
+</body>
+</html>

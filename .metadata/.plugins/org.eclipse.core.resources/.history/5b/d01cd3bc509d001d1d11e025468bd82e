@@ -1,0 +1,29 @@
+package com.vivekanand;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class SetCookiesServlet extends HttpServlet{
+	
+	private static final long serialVersionUID = 1L;
+
+	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException
+	{
+		PrintWriter out = res.getWriter();
+		out.println("Creating Cookies");
+		String name = req.getParameter("name");
+		Cookie c = new Cookie("UserName",name);
+		res.addCookie(c);
+		out.println("Cookies Created");
+		out.println(c.getDomain());
+		out.close();
+		
+		
+		
+}
+}

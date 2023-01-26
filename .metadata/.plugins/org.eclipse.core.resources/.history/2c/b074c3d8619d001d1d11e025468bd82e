@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Solution No. 13</title>
+</head>
+<body>
+<h3>13.	Write a servlet program to select the details of an employee (emp id, empname, empadd,empphone) and <br>
+ display on browser in appropriate format.</h3>
+</body>
+</html>

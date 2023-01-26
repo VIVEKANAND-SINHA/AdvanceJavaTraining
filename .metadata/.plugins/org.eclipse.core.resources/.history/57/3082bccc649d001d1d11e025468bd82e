@@ -1,0 +1,27 @@
+package com.vivekanand;
+
+import java.io.IOException;
+import java.sql.*;
+
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+
+public class FetchDataServlet extends HttpServlet
+{
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
+		try{  
+			Class.forName("com.mysql.jdbc.Driver");  
+			Connection con=DriverManager.getConnection(  
+			"jdbc:mysql://localhost:3306/ajp","root","root");    
+			Statement stmt=con.createStatement();  
+			ResultSet rs=stmt.executeQuery("select name from emp");  
+			while(rs.next())  
+			System.out.println(rs.getString(1));  
+			con.close();  
+			}catch(Exception e){ System.out.println(e);}  
+			}  
+	
+}
+
