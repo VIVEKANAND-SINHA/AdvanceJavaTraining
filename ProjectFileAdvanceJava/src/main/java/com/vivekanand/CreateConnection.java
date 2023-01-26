@@ -19,9 +19,7 @@ public class CreateConnection {
         String dbPassword = "root";
   
         Class.forName(dbDriver);
-        Connection con = DriverManager.getConnection(dbURL + dbName,
-                                                     dbUsername, 
-                                                     dbPassword);
+        Connection con = DriverManager.getConnection(dbURL + dbName,dbUsername, dbPassword); 
         return con;
-    }
-}
+        }
+        }

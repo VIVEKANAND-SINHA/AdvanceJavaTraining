@@ -1,0 +1,56 @@
+package com.vivekanand;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class DisplaySetCookies extends HttpServlet{
+	private static final long serialVersionUID = 1L;
+
+	public void service(HttpServletRequest req, HttpServletResponse res) throws IOException
+	{
+		 try (PrintWriter out = res.getWriter()) {
+	            out.println("<!DOCTYPE html>");
+	            out.println("<html>");
+	            out.println("<head>");
+	            out.println("<title>Display Cookies</title>");
+	            out.println("</head>");
+	            out.println("<body>");
+	  
+	            // Fetching cookies(if found more than one)
+	            // Array of Cookies
+	            Cookie[] cookies = req.getCookies();
+	            boolean f = false;
+	            String name = "";
+	            if (cookies == null) {
+	                out.println("<h1>You are new user, go to home page and submit your institute's name");
+	                return;
+	            }
+	            else {
+	                for (Cookie c : cookies) {
+	                    String tname = c.getName();
+	                    if (tname.equals("name")) {
+	                        f = true;
+	                        name = c.getValue();
+	                    }
+	                }
+	            }
+	            if (f) {
+	                out.println("<h1> Hello, welcome back "
+	                            + name + " </h1>");
+	                out.println("<h2>Thank you!!</h2>");
+	            }
+	            else {
+	                out.println(
+	                    "<h1>You are new user, go to home page and submit your institute's name");
+	            }
+	  
+	            out.println("</body>");
+	            out.println("</html>");
+	        }
+	    }
+	}
