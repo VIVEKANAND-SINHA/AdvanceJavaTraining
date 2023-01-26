@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<pre>
+
+19.	Assume four users user1, user2, user3 and user4 having the passwords pwd1, pwd2, pwd3 and pwd4 respectively.
+Write a servlet for doing the following. 
+Create a Cookie and add these four-user id’s and passwords to this Cookie.
+2.Read the user id and passwords entered in the Login form and authenticate 
+with the values available in the cookies.
+</pre>
+
+<form method = "post" action = "myauth">
+<pre>
+Enter your UserName : <input type = "text" name = "name">
+Enter your PassWord : <input type = "text" name = "pass">
+<button type = "submit"> Authencation !</button>
+
+
+</pre>
+</form>
+
+</body>
+</html>

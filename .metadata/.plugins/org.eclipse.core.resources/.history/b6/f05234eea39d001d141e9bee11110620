@@ -85,26 +85,5 @@
 	<servlet-name>myser9</servlet-name>
 	<url-pattern>/redirect</url-pattern>
 	</servlet-mapping>
-	
-		<servlet>
-	<servlet-name>myser10</servlet-name>
-	<servlet-class>com.vivekanand.AuthencationServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-	<servlet-name>myser10</servlet-name>
-	<url-pattern>/myauth</url-pattern>
-	</servlet-mapping>
-	
-		<servlet>
-	<servlet-name>myser11</servlet-name>
-	<servlet-class>com.vivekanand.ValidServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-	<servlet-name>myser11</servlet-name>
-	<url-pattern>/validation</url-pattern>
-	</servlet-mapping>
-	
-	
-	
 
 </web-app>

@@ -101,7 +101,7 @@
 	</servlet>
 	<servlet-mapping>
 	<servlet-name>myser11</servlet-name>
-	<url-pattern>/validation</url-pattern>
+	<url-pattern>/validate</url-pattern>
 	</servlet-mapping>
 	
 	
