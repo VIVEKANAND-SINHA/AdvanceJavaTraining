@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="5.0">
+  <display-name>AdvanceJavaTest</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+  <servlet>
+  <servlet-name>myservlet1</servlet-name>
+  <servlet-class>com.vivekanandtest.AddUsersServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>myservlet1</servlet-name>
+  <url-pattern>/addusers</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>myservlet2</servlet-name>
+  <servlet-class>com.vivekanandtest.ValidateServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>myservlet2</servlet-name>
+  <url-pattern>/validate</url-pattern>
+  
+  </servlet-mapping>
+</web-app>

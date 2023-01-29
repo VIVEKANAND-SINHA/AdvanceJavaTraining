@@ -20,7 +20,7 @@ public class SetCookiesServlet extends HttpServlet{
 		Cookie c = new Cookie("UserName",name);
 		res.addCookie(c);
 		out.println("<h1>Cookies Created");
-		out.println("<h1> Value of Cookie: "+c.getValue());
+		out.println("<h1> Value of Cookie: "+c);
 		out.close();
 		
 		

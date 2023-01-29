@@ -27,15 +27,14 @@ public class ValidServlet  extends HttpServlet{
 			    }
 			    else {
 			    	String name1 = request.getParameter("name");
-			    	for (Cookie ck : c) {
-			    		String tempName = ck.getValue();
-			    		out.println(ck.getValue());
+//			    	String pass1 = request.getParameter("pass");
+			    	for (int i = 0 ; i< 8; i++) {
+			    		if (c[i].getValue().equals(name1))
                
-			    		if (tempName.equals(name1))
 			    		{
-			    			String name = ck.getValue(); 
+			    	
 			    			t = True;
-			    			out.println("<h1>Welcome to your profile, " + name);
+			    			out.println("<h1>Welcome to your profile, " + name1);
 			    			out.close();  
 			    		}
 			    	}
